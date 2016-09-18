@@ -1,2 +1,13 @@
 .home {
+  &-grid {
+    height: 100%;
+  }
+
+  &-gridRow {
+    margin: auto;
+  }
+
+  &-button {
+    margin: auto;
+  }
 }
