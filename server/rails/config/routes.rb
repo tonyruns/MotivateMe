@@ -3,4 +3,7 @@ Rails.application.routes.draw do
   scope 'api' do
     resources :music, only: [:index]
   end
+
+  root 'welcome#index'
+
 end
