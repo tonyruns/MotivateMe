@@ -11,7 +11,9 @@ export class AudioService {
 
   getClip() {
     return new Promise<MotivateMe.AudioClip>((resolve) => {
-      // this.http.get('')
+      this.http.get('http://quotimotivate.herokuapp.com/api/music').subscribe(response => {
+        console.log(response);
+      });
       resolve({
         url: 'https://ia802508.us.archive.org/5/items/testmp3testfile/mpthreetest.mp3',
         text: 'asd'
