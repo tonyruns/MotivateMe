@@ -9,5 +9,10 @@
 
   &-button {
     margin: auto;
+    z-index: 10000;
+  }
+
+  scroll-content {
+    overflow: hidden;
   }
 }

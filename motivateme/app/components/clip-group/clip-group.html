@@ -1,0 +1,10 @@
+<div class="clip-group">
+  <clip-view
+    *ngFor="let c of clipViews"
+    [clip]="c.clip"
+    [style.left]="c.position.left"
+    [style.top]="c.position.top"
+    [style.transform]="'translateX(-50%)'"
+  >
+  </clip-view>
+</div>
