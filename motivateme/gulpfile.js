@@ -72,3 +72,7 @@ gulp.task('clean', function(){
   return del('www/build');
 });
 gulp.task('lint', tslint);
+
+gulp.task('copyToServer', function(){
+  gulp.src('www/**/*').pipe(gulp.dest('../server/rails/public/'));
+});
