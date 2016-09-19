@@ -6,7 +6,22 @@ interface ClipPositionView {
   position: {
     left: string,
     top: string
-  }
+  },
+  color: string
+}
+
+const colorMap = {
+  0: '#D50000',
+  1: '#EF6C00',
+  2: '#F9A825',
+  3: '#2E7D32',
+  4: '#0091EA',
+  5: '#283593',
+  6: '#6A1B9A',
+};
+
+function getColor(id: number) {
+  return colorMap[id % 7];
 }
 
 @Component({
@@ -49,7 +64,8 @@ export class ClipGroupComponent {
           position: {
             left: `${left}%`,
             top: `${top}%`
-          }
+          },
+          color: getColor(clip.id)
         });
       });
 
